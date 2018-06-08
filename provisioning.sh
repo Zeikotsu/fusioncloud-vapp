@@ -9,6 +9,7 @@ yum install -y yum-utils ansible git
 
 # copy public key for transparent ssh connection
 cat /root/.ssh/id_rsa.pub > /root/.ssh/authorized_keys
+ssh-keyscan localhost > /root/.ssh/known_hosts
 
 # retrieve the playbook form GitHub
 mkdir -p /tmp/provisionning && cd /tmp/provisionning
